@@ -522,7 +522,6 @@ public class HotelBookingSystemGUICode extends javax.swing.JFrame {
                             checkoutLabel.setText("Not valid");
                             checkoutLabel.setForeground(Color.red);
 
-                            //  System.out.println("I am here");
                         }
 
                     }
@@ -533,18 +532,14 @@ public class HotelBookingSystemGUICode extends javax.swing.JFrame {
                         checkoutLabel.setText("Check out Date");
                         checkoutLabel.setForeground(Color.black);
 
-                        System.out.println("Month" + totalMonthsBooked);
-                        System.out.println("years" + totalYearsBooked);
-                        System.out.println("days" + totalDaysBooked);
+                       
 
                         if (totalDaysBooked < 7 && totalMonthsBooked < 1 && totalYearsBooked < 1) {
 
                             detailsLabel.setText("Thank you for the details");
                             detailsLabel.setVisible(true);
                             detailsLabel.setForeground(Color.blue);
-                            //bottomPanel.setVisible(true);
                             anotherMiddle.setVisible(true);
-                             System.out.println("I am here with truth");
 
                         }
                         else if ((totalDaysBooked > 7) || (totalMonthsBooked > 1 || totalMonthsBooked <= 1) || (totalYearsBooked > 1 || totalYearsBooked <= 1)) {
@@ -552,14 +547,9 @@ public class HotelBookingSystemGUICode extends javax.swing.JFrame {
                             detailsLabel.setText("Cannot book more than 7 days");
                             detailsLabel.setForeground(Color.red);
                             detailsLabel.setVisible(true);
-                            System.out.println("why ia m not printed");
                             checkoutLabel.setText("Check out date");
                             checkoutLabel.setForeground(Color.red);
 
-                            //System.out.println("I am here 2");
-                            //anotherMiddle.setVisible(false);
-                            // bottomPanel.setVisible(true);
-                            // anotherMiddle.setVisible(true);
                         }
 
                     }
@@ -590,16 +580,14 @@ public class HotelBookingSystemGUICode extends javax.swing.JFrame {
             submitCounter++;
             index = guestsBox.getSelectedIndex(); //to get the index choosen by the user
 
-            // System.out.println(""+index);
             this.selectedguestNumber = ++index; //Because the index starts from 0
 
             if (submitCounter == 1) { // Capturing the numberofGuest at the first time when SubmitButton is clicked
-                //System.out.println("Index is " + index);
                 this.totalnumberofGuests = index++;
 
             }
 
-            System.out.println("" + totalnumberofGuests);
+           // System.out.println("" + totalnumberofGuests);
 
             if (oneBedroom.isSelected()) {
                 this.singleCounter++; //To count the number of OneBedroom Selected
